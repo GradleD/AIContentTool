@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+nav li a{
+    font-family: 'Poppins',sans-serif;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #333;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* style.css */
+.container {
+    text-align: center;
+}
+
+.result-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.circle.blue {
+    border: 4px solid #1283ce; /* Blue color for AI Written */
+     background-color: white;
+}
+
+.circle.green {
+    border:4px solid #07ac4c; /* Green color for Human Written */
+    background-color: white;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Poppins',sans-serif;
+}
+/* Add this CSS to style.css */
+
+/* Center loader */
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Container for result items */
+.container {
+    margin-top: 50px;
+}
+
+/* Circular elements */
+.circle {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* AI Written circle */
+.blue {
+    background-color: #007bff;
+    color: #000;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Human Written circle */
+.green {
+    background-color: #28a745;
+    color: #000;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+/* Word count message */
+#wordCount {
+    display: block;
+    margin-top: 10px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
