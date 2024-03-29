@@ -3,11 +3,13 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import torch
 from difflib import SequenceMatcher
 import time
+from flask_frozen import Freezer
+freezer = Freezer(app)
 
 app = Flask(__name__)
 
 def calculate_similarity(text1, text2):
-    # Using SequenceMatcher to calculate similarity ratio between two texts
+    # Using SequenceMatcher to calculate the similarity ratio between two texts
     return SequenceMatcher(None, text1, text2).ratio()
 
 def estimate_ai_percentage(input_text, ai_generated_text):
@@ -61,4 +63,4 @@ def check():
 
 if __name__ == "__main__":
     app.run(debug=True)
-        
+    freezer.freeze()
