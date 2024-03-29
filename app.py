@@ -3,8 +3,10 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import torch
 from difflib import SequenceMatcher
 import time
+from flask_frozen import Freezer
 
 app = Flask(__name__)
+freezer = Freezer(app)
 
 def calculate_similarity(text1, text2):
     # Using SequenceMatcher to calculate similarity ratio between two texts
@@ -60,5 +62,7 @@ def check():
     return render_template('index.html', ai_percentage=ai_percentage, human_percentage=human_percentage)
 
 if __name__ == "__main__":
+
     app.run(debug=True)
-        
+freezer.freeze()
+       

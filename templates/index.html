@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Content Detection</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">AI Content Detection Tool</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -37,7 +40,7 @@
             </ul>
         </div>
     </nav>
-    
+
     <div class="container mt-5">
         <div id="loader" class="text-center mb-3" style="display: none;">
             <div class="spinner-border text-primary" role="status">
@@ -48,7 +51,8 @@
         <div>
             <form id="contentForm" action="/check" method="post">
                 <div class="form-group">
-                    <textarea class="form-control" name="input_text" id="inputText" rows="5" placeholder="Enter up to 1000 words here..." required></textarea>
+                    <textarea class="form-control" name="input_text" id="inputText" rows="5"
+                        placeholder="Enter up to 1000 words here..." required></textarea>
                     <small class="text-muted" id="wordCount">0 words</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Check</button>
@@ -80,11 +84,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        document.getElementById("contentForm").addEventListener("submit", function(event) {
+        document.getElementById("contentForm").addEventListener("submit", function (event) {
             document.getElementById("loader").style.display = "block"; // Show loader
         });
 
-        document.getElementById("inputText").addEventListener("input", function(event) {
+        document.getElementById("inputText").addEventListener("input", function (event) {
             var wordCount = this.value.trim().split(/\s+/).length;
             document.getElementById("wordCount").textContent = wordCount + " words";
             if (wordCount > 1000) {
@@ -95,4 +99,5 @@
         });
     </script>
 </body>
+
 </html>
