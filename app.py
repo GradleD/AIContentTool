@@ -9,7 +9,7 @@ app = Flask(__name__)
 freezer = Freezer(app)
 
 def calculate_similarity(text1, text2):
-    # Using SequenceMatcher to calculate similarity ratio between two texts
+    # Using SequenceMatcher to calculate the similarity ratio between two texts
     return SequenceMatcher(None, text1, text2).ratio()
 
 def estimate_ai_percentage(input_text, ai_generated_text):
@@ -21,6 +21,7 @@ def estimate_ai_percentage(input_text, ai_generated_text):
 @app.route('/')
 def home():
     return render_template('index.html')
+
 @app.route('/about')
 def about():
     return render_template('About.html')
