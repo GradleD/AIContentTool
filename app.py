@@ -4,9 +4,9 @@ import torch
 from difflib import SequenceMatcher
 import time
 from flask_frozen import Freezer
-freezer = Freezer(app)
 
 app = Flask(__name__)
+freezer = Freezer(app)
 
 def calculate_similarity(text1, text2):
     # Using SequenceMatcher to calculate the similarity ratio between two texts
@@ -21,6 +21,7 @@ def estimate_ai_percentage(input_text, ai_generated_text):
 @app.route('/')
 def home():
     return render_template('index.html')
+
 @app.route('/about')
 def about():
     return render_template('About.html')
@@ -63,4 +64,5 @@ def check():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    freezer.freeze()
+freezer.freeze()
+
