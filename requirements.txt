@@ -33,3 +33,4 @@ typing_extensions==4.10.0
 urllib3==1.26.9
 uvicorn==0.17.6
 Werkzeug==3.0.1
+waitress==2.1.2

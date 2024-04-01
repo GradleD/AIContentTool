@@ -66,7 +66,6 @@ def check():
     return render_template('index.html', ai_percentage=ai_percentage, human_percentage=human_percentage)
 
 if __name__ == "__main__":
-
-    app.run()
-freezer.freeze()
+    freezer.freeze()
+    #app.run()
        
