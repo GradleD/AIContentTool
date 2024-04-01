@@ -21,6 +21,9 @@ def estimate_ai_percentage(input_text, ai_generated_text):
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/health')
+def health_check():
+    return 'OK'
 
 @app.route('/about')
 def about():
