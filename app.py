@@ -22,21 +22,22 @@ def estimate_ai_percentage(input_text, ai_generated_text):
 def home():
     return render_template('index.html')
 
-@app.route('/about')
+@app.route('/about/')
 def about():
-    return render_template('About.html')
+    return render_template('About.html'), 200, {'Content-Type': 'text/html; charset=utf-8'}
 
-@app.route('/contact')
+@app.route('/contact/')
 def contact():
-    return render_template('Contact.html')
+    return render_template('Contact.html'), 200, {'Content-Type': 'text/html; charset=utf-8'}
 
-@app.route('/pricing')
+@app.route('/pricing/')
 def pricing():
-    return render_template('Pricing.html')
+    return render_template('Pricing.html'), 200, {'Content-Type': 'text/html; charset=utf-8'}
 
-@app.route('/blog')
+@app.route('/blog/')
 def blog():
-    return render_template('Blog.html')
+    return render_template('Blog.html'), 200, {'Content-Type': 'text/html; charset=utf-8'}
+
 
 @app.route('/check', methods=['POST'])
 def check():
