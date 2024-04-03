@@ -65,4 +65,4 @@ def check():
 
 if __name__ == "__main__":
     freezer.freeze()
-    app.run(host='0.0.0.0', port=5000)       
+    app.run(host='64.23.229.65', port=5000)       
